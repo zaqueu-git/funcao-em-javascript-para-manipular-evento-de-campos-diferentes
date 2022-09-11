@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", myPage);
 
 function myPage() {
-    let contentPage = document.querySelector('.js-content-page');
-    let clickTag = contentPage.querySelectorAll('.js-click-tag');
-
-    for (let i = 0; i < clickTag.length; i++) {
-        clickTag[i].addEventListener('click', clickTagHandler);        
-    }
+    const contentPage = document.querySelector('.js-content-page');
+    const clickTag = contentPage.querySelectorAll('.js-click-tag');
+    
+    coursesItemsTag.forEach((element) => element.addEventListener("change", clickTagHandler));
 
     function clickTagHandler(event) {
         console.log("click: função ATIVADA ao clicar no checkbox");
